@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background-color: #08080a;
+}
+
+/* Custom scrollbars - Minimalist Gold/Charcoal */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(223, 177, 91, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(223, 177, 91, 0.35);
+}
+
+/* Custom Premium Matte Panels */
+.matte-panel {
+  background: #111216;
+  border: 1px solid #1c1d24;
+}
+
+.matte-panel:hover {
+  border-color: #dfb15b50;
+}
+
+/* Premium Glowing Accents */
+.glow-gold {
+  box-shadow: 0 0 40px -15px rgba(223, 177, 91, 0.12);
+}
+
+.glow-teal {
+  box-shadow: 0 0 40px -15px rgba(13, 148, 136, 0.12);
+}
+
+.glow-bronze {
+  box-shadow: 0 0 40px -15px rgba(180, 83, 9, 0.12);
+}
+
+.glow-crimson {
+  box-shadow: 0 0 40px -15px rgba(225, 29, 72, 0.12);
+}
+
+/* Animations */
+@keyframes drift-slow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translate(15px, -15px) scale(1.05);
+  }
+}
+
+.animate-drift-slow {
+  animation: drift-slow 12s ease-in-out infinite;
+}
